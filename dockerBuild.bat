@@ -1,0 +1,2 @@
+mvn compile jib:dockerBuild --offline & docker stop findit-1-1 findit-1-2 findit-1-3 findit-1-4 & docker rm findit-1-1 findit-1-2 findit-1-3 findit-1-4 & docker run -d --name findit-1-1 --cpus=1 -p 8081:8080 findit & docker run -d --name findit-1-2 --cpus=1 -p 8082:8080 findit & docker run -d --name findit-1-3 --cpus=1 -p 8083:8080 findit & docker run -d --name findit-1-4 --cpus=1 -p 8084:8080 findit 
+
